@@ -12,11 +12,9 @@ const AWSContentType = 'application/x-amz-json-1.0';
 let fastsha256 = null;
 
 function main(params, callback){
-  console.log({fastsha256});
-  console.log('hmac', typeof fastsha256.hmac);
-
+  // console.log({fastsha256});
+  // console.log('hmac', typeof fastsha256.hmac);
   const body = JSON.stringify({});
-
   const para = {
     accessKey: AWSAccessKeyId,
     secretKey: AWSSecretAccessKey,
@@ -197,7 +195,13 @@ function sha256hash(text) {
 function byteArrayToHex(arr) {
   //  Given an array of bytes, return a hex string like 'a1b2c3'.
   if (typeof arr === 'string') throw new Error('not_byte_array');
-  return arr.map(byte => ((byte < 16) ? '0' : '') + byte.toString(16).toLowerCase()).join('');
+  const stringArr = [];
+  for (const byte of arr) {
+    let s = byte.toString(16).toLowerCase();
+    if (s.length === 1) s = '0' + s;
+    stringArr.push(s);
+  }
+  return stringArr.join('');
 }
 
 function stringToUtf8ByteArray(str) {
@@ -263,7 +267,6 @@ fastsha256 =
       root.sha256 = sha256;
     }
 
-    console.log({ exports }); ////
     return exports; //// Added to https://github.com/dchest/fast-sha256-js
 
   })(this, function(exports) {
