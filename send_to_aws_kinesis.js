@@ -30,7 +30,7 @@ function main(params0, callback){
   const params = { timestamp: params0.timestamp };
   if (!params.timestamp) params.timestamp = new Date().toISOString();
   Object.assign(params, params0);  //  Copy all key-values.
-  console.log('*** send_to_aws_kinesis Begin', { params });
+  console.log('*** send_to_aws_kinesis start', { params });
   const base64Params = jsbase64.encode(JSON.stringify(params));  //  Params JSON doc encoded in Base64.
   const body = {
     StreamName: AWSKinesisStream,
