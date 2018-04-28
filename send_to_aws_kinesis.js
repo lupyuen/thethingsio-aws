@@ -46,6 +46,7 @@ function main(params, callback){
     body: '',
     region: 'us-east-1',
     service: 'iam',
+    expectedAuthorizationHeader: 'AWS4-HMAC-SHA256 Credential=AKIDEXAMPLE/20150830/us-east-1/iam/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=5d672d79c15b13162d9279b0855cfba6789a8edb4c82c400e06b5924a6f2b5d7',
   };
   const headers = composeAWSRequestHeader(para);
   // console.log({headers});
@@ -57,33 +58,6 @@ if (unittest) {
   setTimeout(() => main({}, (error, result) =>
     console.log(error, result)), 1000);
 }
-/*
-  const dateStamp = '20120215';
-  const regionName = 'us-east-1';
-  const serviceName = 'iam';
-
-  const HTTPRequestMethod = 'GET';
-  const CanonicalURI = 'https://iam.amazonaws.com/';
-  const CanonicalQueryString = 'Action=ListUsers&Version=2010-05-08';
-  const CanonicalHeaders = '';
-
-  const request = [
-      'GET https://iam.amazonaws.com/?Action=ListUsers&Version=2010-05-08 HTTP/1.1',
-      'Host: iam.amazonaws.com',
-      'Content-Type: application/x-www-form-urlencoded; charset=utf-8',
-      'X-Amz-Date: 20150830T123600Z',
-  ];
-  const RequestPayload = request.join('\n');
-  const CanonicalRequest =
-    HTTPRequestMethod + '\n' +
-    CanonicalURI + '\n' +
-    CanonicalQueryString + '\n' +
-    CanonicalHeaders + '\n' +
-    SignedHeaders + '\n' +
-    HexEncode(Hash(RequestPayload));
-
-  const signKey = getSignatureKey(AWSSecretAccessKey, dateStamp, regionName, serviceName);
- */
 
 function composeAWSRequestHeader(para) {
   //  Compose a signed AWS request header. Based on https://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html#sig-v4-examples-post
@@ -101,7 +75,7 @@ function composeAWSRequestHeader(para) {
   const now = new Date().toISOString();  //  e.g. "2018-04-28T07:19:47.414Z"
   // Get ISO 8601 format: YYYYMMDD'T'HHMMSS'Z' e.g. "20180428T072028Z"
   let amzDate = now.substr(0, 19).split('-').join('').split(':').join('') + 'Z';
-  if (unittest && para.amzDate) { amzDate = para.amzDate; console.log('***', { amzDate }) }
+  if (unittest && para.amzDate) { amzDate = para.amzDate; console.log('*** Unit Test:', { amzDate }) }
   //  Date without time, used in credential scope, e.g. "20180428"
   const datestamp = amzDate.substr(0, 8);
 
@@ -180,6 +154,17 @@ function composeAWSRequestHeader(para) {
     // 'X-Amz-Target': amz_target,
     'Authorization': authorizationHeader
   };
+  // Unit Test: Check the authorization header.
+  if (unittest && para.expectedAuthorizationHeader) {
+    if (authorizationHeader === para.expectedAuthorizationHeader)
+      console.log('*** Unit Test: Expected authorization header OK');
+    else throw new Error([
+      'Expected authorization header:',
+      para.expectedAuthorizationHeader,
+      'Got:',
+      authorizationHeader,
+    ].join('\n'));
+  }
 
   // ************* SEND THE REQUEST *************
   // r = requests.post(endpoint, data=request_parameters, headers=headers);
