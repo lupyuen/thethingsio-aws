@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="send_to_aws_kinesis" type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="send_to_aws_kinesis.js" working-dir="$PROJECT_DIR$">
+    <envs>
+      <env name="UNITTEST" value="1" />
+    </envs>
+    <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSProfilingRunConfigurationExtension">
+      <profiling v8-profiler-path="/usr/local/lib/node_modules/v8-profiler" />
+    </EXTENSION>
+    <method />
+  </configuration>
+</component>
