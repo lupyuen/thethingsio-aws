@@ -36,7 +36,7 @@ function main(params, callback){
 }
 
 //  Unit Test
-if (process && process.env && process.env.UNITTEST) {
+if (typeof process !== 'undefined' && process && process.env && process.env.UNITTEST) {
   setTimeout(() => main({}, (error, result) =>
     console.log(error, result)), 1000);
 }
@@ -70,18 +70,16 @@ if (process && process.env && process.env.UNITTEST) {
 
 function composeAWSRequestHeader(para) {
   //  Compose a signed AWS request header. Based on https://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html#sig-v4-examples-post
-  const { accessKey, secretKey, method, uri, queryString, contentType,
-    host, body, region, service } = para;
-  if (!accessKey) throw new Error('missing accessKey');
-  if (!secretKey) throw new Error('missing secretKey');
-  if (!method) throw new Error('missing method');
-  if (!uri) throw new Error('missing uri');
-  if (!queryString && queryString !== '') throw new Error('missing queryString');
-  if (!contentType) throw new Error('missing contentType');
-  if (!host) throw new Error('missing host');
-  if (!body) throw new Error('missing body');
-  if (!region) throw new Error('missing region');
-  if (!service) throw new Error('missing service');
+  if (!para.accessKey) throw new Error('missing accessKey');
+  if (!para.secretKey) throw new Error('missing secretKey');
+  if (!para.method) throw new Error('missing method');
+  if (!para.uri) throw new Error('missing uri');
+  if (!para.queryString && para.queryString !== '') throw new Error('missing queryString');
+  if (!para.contentType) throw new Error('missing contentType');
+  if (!para.host) throw new Error('missing host');
+  if (!para.body) throw new Error('missing body');
+  if (!para.region) throw new Error('missing region');
+  if (!para.service) throw new Error('missing service');
 
   const now = new Date().toISOString();  //  e.g. "2018-04-28T07:19:47.414Z"
   // Get ISO 8601 format: YYYYMMDD'T'HHMMSS'Z' e.g. "20180428T072028Z"
@@ -107,8 +105,8 @@ function composeAWSRequestHeader(para) {
   // and lowercase, and sorted in code point order from low to high.
   // Note that there is a trailing \n.
   const canonicalHeaders =
-    'content-type:' + contentType + '\n' +
-    'host:' + host + '\n' +
+    'content-type:' + para.contentType + '\n' +
+    'host:' + para.host + '\n' +
     'x-amz-date:' + amzDate + '\n';
     // 'x-amz-target:' + amz_target + '\n';
 
@@ -123,24 +121,24 @@ function composeAWSRequestHeader(para) {
 
   // Step 6: Create payload hash. In this example, the payload (body of
   // the request) contains the request parameters.
-  const payloadHash = sha256hash(body);
+  const payloadHash = sha256hash(para.body);
 
   // Step 7: Combine elements to create canonical request
-  const canonicalRequest = method + '\n' + uri + '\n' +
-    queryString + '\n' + canonicalHeaders + '\n' +
+  const canonicalRequest = para.method + '\n' + para.uri + '\n' +
+    para.queryString + '\n' + canonicalHeaders + '\n' +
     signedHeaders + '\n' + payloadHash;
   const canonicalRequestHash = sha256hash(canonicalRequest);
 
   // ************* TASK 2: CREATE THE STRING TO SIGN*************
   // Match the algorithm to the hashing algorithm you use, either SHA-1 or SHA-256 (recommended)
   const algorithm = 'AWS4-HMAC-SHA256';
-  const credentialScope = datestamp + '/' + region + '/' + service + '/' + 'aws4_request';
+  const credentialScope = datestamp + '/' + para.region + '/' + para.service + '/' + 'aws4_request';
   const stringToSign = algorithm + '\n' +  amzDate + '\n' +
     credentialScope + '\n' + canonicalRequestHash;
 
   // ************* TASK 3: CALCULATE THE SIGNATURE *************
   // Create the signing key using the function defined above.
-  const signingKey = getSignatureKey(secretKey, datestamp, region, service);
+  const signingKey = getSignatureKey(para.secretKey, datestamp, para.region, para.service);
 
   // Sign the stringToSign using the signingKey
   const signature = sha256hmac(stringToSign, signingKey);
@@ -149,7 +147,7 @@ function composeAWSRequestHeader(para) {
   // ************* TASK 4: ADD SIGNING INFORMATION TO THE REQUEST *************
   // Put the signature information in a header named Authorization.
   const authorizationHeader = algorithm + ' ' +
-    'Credential=' + accessKey + '/' + credentialScope + ', ' +
+    'Credential=' + para.accessKey + '/' + credentialScope + ', ' +
     'SignedHeaders=' + signedHeaders + ', ' +
     'Signature=' + signatureStr;
 
@@ -157,9 +155,9 @@ function composeAWSRequestHeader(para) {
   // "x-amz-target", "content-type", and "Authorization". Except for the authorization
   // header, the headers must be included in the canonicalHeaders and signedHeaders values, as
   // noted earlier. Order here is not significant.
-  headers = {
-    'Content-Type': contentType,
-    'Host': host,
+  const headers = {
+    'Content-Type': para.contentType,
+    'Host': para.host,
     'X-Amz-Date': amzDate,
     // 'X-Amz-Target': amz_target,
     'Authorization': authorizationHeader
@@ -625,8 +623,5 @@ fastsha256 =
       return dk;
     }
     exports.pbkdf2 = pbkdf2;
-
-//console.log({ exports });
-//return exports; ////
   });
 //  End of https://github.com/dchest/fast-sha256-js
