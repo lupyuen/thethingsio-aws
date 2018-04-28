@@ -2,6 +2,165 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2aefaf11-0bbb-4c6c-81d1-9f81b9b7f842" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/LICENSE" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/NOTICE" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-key-duplicate/get-header-key-duplicate.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-key-duplicate/get-header-key-duplicate.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-key-duplicate/get-header-key-duplicate.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-key-duplicate/get-header-key-duplicate.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-key-duplicate/get-header-key-duplicate.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-multiline/get-header-value-multiline.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-multiline/get-header-value-multiline.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-multiline/get-header-value-multiline.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-multiline/get-header-value-multiline.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-multiline/get-header-value-multiline.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-order/get-header-value-order.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-order/get-header-value-order.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-order/get-header-value-order.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-order/get-header-value-order.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-order/get-header-value-order.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-trim/get-header-value-trim.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-trim/get-header-value-trim.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-trim/get-header-value-trim.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-trim/get-header-value-trim.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-trim/get-header-value-trim.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-unreserved/get-unreserved.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-unreserved/get-unreserved.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-unreserved/get-unreserved.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-unreserved/get-unreserved.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-unreserved/get-unreserved.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-utf8/get-utf8.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-utf8/get-utf8.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-utf8/get-utf8.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-utf8/get-utf8.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-utf8/get-utf8.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-empty-query-key/get-vanilla-empty-query-key.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-empty-query-key/get-vanilla-empty-query-key.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-empty-query-key/get-vanilla-empty-query-key.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-empty-query-key/get-vanilla-empty-query-key.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-empty-query-key/get-vanilla-empty-query-key.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-key/get-vanilla-query-order-key.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-key/get-vanilla-query-order-key.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-key/get-vanilla-query-order-key.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-key/get-vanilla-query-order-key.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-key/get-vanilla-query-order-key.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-value/get-vanilla-query-order-value.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-value/get-vanilla-query-order-value.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-value/get-vanilla-query-order-value.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-value/get-vanilla-query-order-value.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-value/get-vanilla-query-order-value.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query/get-vanilla-query.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query/get-vanilla-query.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query/get-vanilla-query.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query/get-vanilla-query.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query/get-vanilla-query.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-utf8-query/get-vanilla-utf8-query.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-utf8-query/get-vanilla-utf8-query.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-utf8-query/get-vanilla-utf8-query.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-utf8-query/get-vanilla-utf8-query.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-utf8-query/get-vanilla-utf8-query.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla/get-vanilla.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla/get-vanilla.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla/get-vanilla.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla/get-vanilla.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla/get-vanilla.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-relative-relative/get-relative-relative.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-relative-relative/get-relative-relative.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-relative-relative/get-relative-relative.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-relative-relative/get-relative-relative.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-relative-relative/get-relative-relative.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-relative/get-relative.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-relative/get-relative.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-relative/get-relative.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-relative/get-relative.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-relative/get-relative.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash/get-slash.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash/get-slash.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash/get-slash.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash/get-slash.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash/get-slash.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slashes/get-slashes.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slashes/get-slashes.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slashes/get-slashes.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slashes/get-slashes.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slashes/get-slashes.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-space/get-space.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-space/get-space.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-space/get-space.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-space/get-space.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-space/get-space.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/normalize-path.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-key-case/post-header-key-case.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-key-case/post-header-key-case.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-key-case/post-header-key-case.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-key-case/post-header-key-case.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-key-case/post-header-key-case.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-key-sort/post-header-key-sort.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-key-sort/post-header-key-sort.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-key-sort/post-header-key-sort.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-key-sort/post-header-key-sort.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-key-sort/post-header-key-sort.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-value-case/post-header-value-case.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-value-case/post-header-value-case.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-value-case/post-header-value-case.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-value-case/post-header-value-case.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-value-case/post-header-value-case.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/post-sts-header-after/post-sts-header-after.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/post-sts-header-after/post-sts-header-after.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/post-sts-header-after/post-sts-header-after.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/post-sts-header-after/post-sts-header-after.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/post-sts-header-after/post-sts-header-after.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/post-sts-header-before/post-sts-header-before.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/post-sts-header-before/post-sts-header-before.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/post-sts-header-before/post-sts-header-before.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/post-sts-header-before/post-sts-header-before.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/post-sts-header-before/post-sts-header-before.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/readme.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla-empty-query-value/post-vanilla-empty-query-value.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla-empty-query-value/post-vanilla-empty-query-value.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla-empty-query-value/post-vanilla-empty-query-value.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla-empty-query-value/post-vanilla-empty-query-value.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla-empty-query-value/post-vanilla-empty-query-value.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla-query/post-vanilla-query.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla-query/post-vanilla-query.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla-query/post-vanilla-query.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla-query/post-vanilla-query.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla-query/post-vanilla-query.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla/post-vanilla.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla/post-vanilla.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla/post-vanilla.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla/post-vanilla.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla/post-vanilla.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-x-www-form-urlencoded-parameters/post-x-www-form-urlencoded-parameters.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-x-www-form-urlencoded-parameters/post-x-www-form-urlencoded-parameters.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-x-www-form-urlencoded-parameters/post-x-www-form-urlencoded-parameters.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-x-www-form-urlencoded-parameters/post-x-www-form-urlencoded-parameters.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-x-www-form-urlencoded-parameters/post-x-www-form-urlencoded-parameters.sts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.authz" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.creq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.req" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.sreq" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.sts" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/send_to_aws_kinesis.js" afterPath="$PROJECT_DIR$/send_to_aws_kinesis.js" />
     </list>
@@ -20,11 +179,11 @@
       <file leaf-file-name="send_to_aws_kinesis.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/send_to_aws_kinesis.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+            <state relative-caret-position="342">
+              <caret line="185" column="2" lean-forward="false" selection-start-line="185" selection-start-column="2" selection-end-line="185" selection-end-column="2" />
               <folding>
-                <element signature="e#13770#13783#0" expanded="true" />
-                <element signature="e#18969#18982#0" expanded="true" />
+                <element signature="e#14380#14393#0" expanded="true" />
+                <element signature="e#19579#19592#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,8 +247,8 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-412" />
-    <option name="y" value="-1404" />
+    <option name="x" value="-397" />
+    <option name="y" value="-1390" />
     <option name="width" value="1587" />
     <option name="height" value="1235" />
   </component>
@@ -139,6 +298,11 @@
               <item name="thethingsio-aws" type="b2602c69:ProjectViewProjectNode" />
               <item name="thethingsio-aws" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="thethingsio-aws" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thethingsio-aws" type="462c0819:PsiDirectoryNode" />
+              <item name="aws-sig-v4-test-suite" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -162,6 +326,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="add_unversioned_files" value="true" />
+    <property name="js.last.introduce.type" value="CONST" />
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
     <UpdatedFiles>
@@ -298,16 +463,23 @@
       <updated>1524892760616</updated>
       <workItem from="1524892761888" duration="5952000" />
       <workItem from="1524899264772" duration="5077000" />
-      <workItem from="1524908560835" duration="1109000" />
+      <workItem from="1524908560835" duration="2441000" />
     </task>
+    <task id="LOCAL-00001" summary="Fixed conversion from array to hex">
+      <created>1524909689621</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1524909689621</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12138000" />
+    <option name="totallyTimeSpent" value="13470000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-412" y="-1404" width="1587" height="1235" extended-state="0" />
-    <editor active="true" />
+    <frame x="-397" y="-1390" width="1587" height="1235" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -317,11 +489,11 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18640776" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18640776" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5080906" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3618123" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -382,8 +554,22 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Fixed conversion from array to hex" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed conversion from array to hex" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/send_to_aws_kinesis.js</url>
+          <line>185</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -392,9 +578,23 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>authorizationHeader</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>canonicalHeaders</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/send_to_aws_kinesis.js">
@@ -402,8 +602,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#13770#13783#0" expanded="true" />
-            <element signature="e#18969#18982#0" expanded="true" />
+            <element signature="e#14380#14393#0" expanded="true" />
+            <element signature="e#19579#19592#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -421,8 +621,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#13770#13783#0" expanded="true" />
-            <element signature="e#18969#18982#0" expanded="true" />
+            <element signature="e#14380#14393#0" expanded="true" />
+            <element signature="e#19579#19592#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -431,6 +631,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -444,11 +645,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/send_to_aws_kinesis.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        <state relative-caret-position="342">
+          <caret line="185" column="2" lean-forward="false" selection-start-line="185" selection-start-column="2" selection-end-line="185" selection-end-column="2" />
           <folding>
-            <element signature="e#13770#13783#0" expanded="true" />
-            <element signature="e#18969#18982#0" expanded="true" />
+            <element signature="e#14380#14393#0" expanded="true" />
+            <element signature="e#19579#19592#0" expanded="true" />
           </folding>
         </state>
       </provider>

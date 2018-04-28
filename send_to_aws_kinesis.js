@@ -8,12 +8,15 @@ const AWSEndpoint = `https://${AWSHost}/`;  //  e.g. https://dynamodb.us-west-2.
 const AWSQueryString = '';
 const AWSMethod = 'POST';
 const AWSContentType = 'application/x-amz-json-1.0';
+const unittest = typeof process !== 'undefined' && process && process.env && process.env.UNITTEST;
 
 let fastsha256 = null;
 
 function main(params, callback){
   // console.log({fastsha256});
   // console.log('hmac', typeof fastsha256.hmac);
+
+  /*
   const body = JSON.stringify({});
   const para = {
     accessKey: AWSAccessKeyId,
@@ -28,13 +31,29 @@ function main(params, callback){
     region: AWSRegion,
     service: AWSService,
   };
+  */
+
+  const para = {
+    amzDate: unittest ? '20150830T123600Z' : null, ////
+    accessKey: 'AKIDEXAMPLE',
+    secretKey: AWSSecretAccessKey,
+    method: 'GET',
+    //  The part of the URI from domain to query.  '/' if no path.
+    uri: '/',
+    queryString: 'Action=ListUsers&Version=2010-05-08',
+    contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+    host: 'iam.amazonaws.com',
+    body: '',
+    region: 'us-east-1',
+    service: 'iam',
+  };
   const headers = composeAWSRequestHeader(para);
-  console.log({headers});
+  // console.log({headers});
   callback(null, headers);
 }
 
 //  Unit Test
-if (typeof process !== 'undefined' && process && process.env && process.env.UNITTEST) {
+if (unittest) {
   setTimeout(() => main({}, (error, result) =>
     console.log(error, result)), 1000);
 }
@@ -75,13 +94,14 @@ function composeAWSRequestHeader(para) {
   if (!para.queryString && para.queryString !== '') throw new Error('missing queryString');
   if (!para.contentType) throw new Error('missing contentType');
   if (!para.host) throw new Error('missing host');
-  if (!para.body) throw new Error('missing body');
+  if (!para.body && para.body !== '') throw new Error('missing body');
   if (!para.region) throw new Error('missing region');
   if (!para.service) throw new Error('missing service');
 
   const now = new Date().toISOString();  //  e.g. "2018-04-28T07:19:47.414Z"
   // Get ISO 8601 format: YYYYMMDD'T'HHMMSS'Z' e.g. "20180428T072028Z"
-  const amzDate = now.substr(0, 19).split('-').join('').split(':').join('') + 'Z';
+  let amzDate = now.substr(0, 19).split('-').join('').split(':').join('') + 'Z';
+  if (unittest && para.amzDate) { amzDate = para.amzDate; console.log('***', { amzDate }) }
   //  Date without time, used in credential scope, e.g. "20180428"
   const datestamp = amzDate.substr(0, 8);
 
