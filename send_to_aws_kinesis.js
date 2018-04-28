@@ -1,13 +1,13 @@
 //  region AWS Settings - FILL IN YOUR OWN AWS SETTINGS HERE
-//  This is a thethings.io Cloud Function that sends the Cloud Function Params as a JSON data record to the AWS
-//  Kinesis Stream declared below.
+//  send_to_aws_kinesis is a thethings.io Cloud Function that sends the Cloud Function Params
+//  (containing sensor data) as a JSON data record to the AWS Kinesis Stream declared below.
 
 const AWSAccessKeyId = 'AKIAJCJ2TMJQ7JJ2QZ6A';
 const AWSSecretAccessKey = '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';
 const AWSRegion = 'ap-southeast-1';
 const AWSKinesisStream = 'sigfox-sensor-stream';
 
-//  //////////////////////////////////////////////////////////////////////////////////// endregion
+//  /////////////////////////////////////////////////////////////////////////////// endregion
 //  region AWS Kinesis Declarations (Do Not Change)
 
 const AWSService = 'kinesis';
@@ -890,7 +890,9 @@ fastsha256 =
 
 //  Run Unit Test on local machine
 if (unittest) {
-  setTimeout(() => main({tmp: 28.9}, (error, result) =>
+  const params =
+    {"tmp": 28.9}
+  ; setTimeout(() => main(params, (error, result) =>
     console.log(error, result)), 1000);
 }
 
