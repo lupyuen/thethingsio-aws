@@ -24,10 +24,12 @@ let jsbase64 = null, Base64 = null;
 //  //////////////////////////////////////////////////////////////////////////////////// endregion
 //  region Main Function
 
-function main(params, callback){
+function main(params0, callback){
   //  Send the params as a JSON data record to the AWS Kinesis Stream declared above.
   //  Set the "timestamp" field if not set.
+  const params = { timestamp: params0.timestamp };
   if (!params.timestamp) params.timestamp = new Date().toISOString();
+  Object.assign(params, params0);  //  Copy all key-values.
   const base64Params = jsbase64.encode(JSON.stringify(params));  //  Params JSON doc encoded in Base64.
   const body = {
     StreamName: AWSKinesisStream,
