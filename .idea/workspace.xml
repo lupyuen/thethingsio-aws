@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2aefaf11-0bbb-4c6c-81d1-9f81b9b7f842" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/sigfox_parser.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,11 +19,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="send_to_aws_kinesis.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="send_to_aws_kinesis.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/send_to_aws_kinesis.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="316">
-                  <caret line="73" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="957" selection-end-column="0" />
+                <state relative-caret-position="1220">
+                  <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
                   <folding>
                     <element signature="e#13163#13734#0" expanded="false" />
                     <element signature="e#13811#13857#0" expanded="false" />
@@ -31,6 +32,16 @@
                     <element signature="e#26432#26468#0" expanded="false" />
                     <marker date="1524926399000" expanded="true" signature="13012:26331" ph="..." />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="sigfox_parser.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/sigfox_parser.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="800">
+                  <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -100,6 +111,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/http.js" />
         <option value="$PROJECT_DIR$/send_to_aws_kinesis.js" />
+        <option value="$PROJECT_DIR$/sigfox_parser.js" />
       </list>
     </option>
   </component>
@@ -333,7 +345,7 @@
       <updated>1524892760616</updated>
       <workItem from="1524892761888" duration="5952000" />
       <workItem from="1524899264772" duration="5077000" />
-      <workItem from="1524908560835" duration="12663000" />
+      <workItem from="1524908560835" duration="15579000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed conversion from array to hex">
       <created>1524909689621</created>
@@ -377,11 +389,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524926583449</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Send HTTP request to AWS working OK">
+      <created>1524926784964</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1524926784964</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23692000" />
+    <option name="totallyTimeSpent" value="26608000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-415" y="-1403" width="1935" height="1235" extended-state="0" />
@@ -399,7 +418,7 @@
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36133122" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36133122" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -467,18 +486,11 @@
     <MESSAGE value="Working OK" />
     <MESSAGE value="Compose Kinesis request" />
     <MESSAGE value="Sending HTTP request to AWS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sending HTTP request to AWS" />
+    <MESSAGE value="Send HTTP request to AWS working OK" />
+    <option name="LAST_COMMIT_MESSAGE" value="Send HTTP request to AWS working OK" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/send_to_aws_kinesis.js</url>
-          <line>79</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -570,8 +582,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/send_to_aws_kinesis.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="73" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="957" selection-end-column="0" />
+        <state relative-caret-position="1220">
+          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding>
             <element signature="e#13163#13734#0" expanded="false" />
             <element signature="e#13811#13857#0" expanded="false" />
@@ -580,6 +592,14 @@
             <element signature="e#26432#26468#0" expanded="false" />
             <marker date="1524926399000" expanded="true" signature="13012:26331" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sigfox_parser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
