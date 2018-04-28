@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2aefaf11-0bbb-4c6c-81d1-9f81b9b7f842" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Luppy.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Luppy.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/send_to_aws_kinesis.js" afterPath="$PROJECT_DIR$/send_to_aws_kinesis.js" />
     </list>
@@ -20,11 +21,14 @@
       <file leaf-file-name="send_to_aws_kinesis.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/send_to_aws_kinesis.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-124">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="251">
+              <caret line="881" column="0" lean-forward="true" selection-start-line="881" selection-start-column="0" selection-end-line="881" selection-end-column="0" />
               <folding>
-                <element signature="e#731#1152#0" expanded="false" />
-                <element signature="e#1169#1842#0" expanded="false" />
+                <element signature="e#11616#12187#0" expanded="false" />
+                <element signature="e#12264#12310#0" expanded="false" />
+                <element signature="e#15229#15242#0" expanded="true" />
+                <element signature="e#20428#20441#0" expanded="true" />
+                <marker date="1524918637000" expanded="false" signature="11465:24784" ph="..." />
               </folding>
             </state>
           </provider>
@@ -52,6 +56,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>#</find>
+      <find>dyna</find>
     </findStrings>
     <replaceStrings>
       <replace>//</replace>
@@ -81,14 +86,17 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="78" />
-    <option name="y" value="62" />
-    <option name="width" value="1026" />
-    <option name="height" value="995" />
+    <option name="x" value="-395" />
+    <option name="y" value="-1403" />
+    <option name="width" value="1587" />
+    <option name="height" value="1235" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -127,8 +135,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,7 +151,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Linters" />
+    <property name="settings.editor.selected.configurable" value="debugger.dataViews" />
     <property name="javascript.nodejs.core.library.configured.version" value="6.3.0" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="/usr/local/lib/node_modules/eslint" />
@@ -159,6 +167,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="add_unversioned_files" value="true" />
+    <property name="js.last.introduce.type" value="CONST" />
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
     <UpdatedFiles>
@@ -183,165 +192,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/LICENSE</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/NOTICE</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-key-duplicate/get-header-key-duplicate.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-key-duplicate/get-header-key-duplicate.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-key-duplicate/get-header-key-duplicate.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-key-duplicate/get-header-key-duplicate.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-key-duplicate/get-header-key-duplicate.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-multiline/get-header-value-multiline.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-multiline/get-header-value-multiline.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-multiline/get-header-value-multiline.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-multiline/get-header-value-multiline.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-multiline/get-header-value-multiline.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-order/get-header-value-order.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-order/get-header-value-order.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-order/get-header-value-order.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-order/get-header-value-order.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-order/get-header-value-order.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-trim/get-header-value-trim.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-trim/get-header-value-trim.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-trim/get-header-value-trim.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-trim/get-header-value-trim.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-header-value-trim/get-header-value-trim.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-unreserved/get-unreserved.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-unreserved/get-unreserved.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-unreserved/get-unreserved.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-unreserved/get-unreserved.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-unreserved/get-unreserved.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-utf8/get-utf8.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-utf8/get-utf8.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-utf8/get-utf8.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-utf8/get-utf8.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-utf8/get-utf8.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-empty-query-key/get-vanilla-empty-query-key.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-empty-query-key/get-vanilla-empty-query-key.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-empty-query-key/get-vanilla-empty-query-key.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-empty-query-key/get-vanilla-empty-query-key.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-empty-query-key/get-vanilla-empty-query-key.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-key-case/get-vanilla-query-order-key-case.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-key/get-vanilla-query-order-key.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-key/get-vanilla-query-order-key.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-key/get-vanilla-query-order-key.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-key/get-vanilla-query-order-key.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-key/get-vanilla-query-order-key.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-value/get-vanilla-query-order-value.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-value/get-vanilla-query-order-value.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-value/get-vanilla-query-order-value.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-value/get-vanilla-query-order-value.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-order-value/get-vanilla-query-order-value.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query-unreserved/get-vanilla-query-unreserved.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query/get-vanilla-query.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query/get-vanilla-query.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query/get-vanilla-query.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query/get-vanilla-query.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-query/get-vanilla-query.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-utf8-query/get-vanilla-utf8-query.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-utf8-query/get-vanilla-utf8-query.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-utf8-query/get-vanilla-utf8-query.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-utf8-query/get-vanilla-utf8-query.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla-utf8-query/get-vanilla-utf8-query.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla/get-vanilla.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla/get-vanilla.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla/get-vanilla.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla/get-vanilla.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/get-vanilla/get-vanilla.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-relative-relative/get-relative-relative.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-relative-relative/get-relative-relative.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-relative-relative/get-relative-relative.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-relative-relative/get-relative-relative.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-relative-relative/get-relative-relative.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-relative/get-relative.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-relative/get-relative.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-relative/get-relative.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-relative/get-relative.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-relative/get-relative.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash-dot-slash/get-slash-dot-slash.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash-pointless-dot/get-slash-pointless-dot.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash/get-slash.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash/get-slash.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash/get-slash.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash/get-slash.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slash/get-slash.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slashes/get-slashes.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slashes/get-slashes.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slashes/get-slashes.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slashes/get-slashes.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-slashes/get-slashes.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-space/get-space.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-space/get-space.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-space/get-space.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-space/get-space.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/get-space/get-space.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/normalize-path/normalize-path.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-key-case/post-header-key-case.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-key-case/post-header-key-case.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-key-case/post-header-key-case.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-key-case/post-header-key-case.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-key-case/post-header-key-case.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-key-sort/post-header-key-sort.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-key-sort/post-header-key-sort.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-key-sort/post-header-key-sort.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-key-sort/post-header-key-sort.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-key-sort/post-header-key-sort.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-value-case/post-header-value-case.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-value-case/post-header-value-case.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-value-case/post-header-value-case.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-value-case/post-header-value-case.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-header-value-case/post-header-value-case.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/post-sts-header-after/post-sts-header-after.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/post-sts-header-after/post-sts-header-after.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/post-sts-header-after/post-sts-header-after.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/post-sts-header-after/post-sts-header-after.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/post-sts-header-after/post-sts-header-after.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/post-sts-header-before/post-sts-header-before.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/post-sts-header-before/post-sts-header-before.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/post-sts-header-before/post-sts-header-before.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/post-sts-header-before/post-sts-header-before.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/post-sts-header-before/post-sts-header-before.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-sts-token/readme.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla-empty-query-value/post-vanilla-empty-query-value.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla-empty-query-value/post-vanilla-empty-query-value.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla-empty-query-value/post-vanilla-empty-query-value.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla-empty-query-value/post-vanilla-empty-query-value.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla-empty-query-value/post-vanilla-empty-query-value.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla-query/post-vanilla-query.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla-query/post-vanilla-query.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla-query/post-vanilla-query.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla-query/post-vanilla-query.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla-query/post-vanilla-query.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla/post-vanilla.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla/post-vanilla.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla/post-vanilla.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla/post-vanilla.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-vanilla/post-vanilla.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-x-www-form-urlencoded-parameters/post-x-www-form-urlencoded-parameters.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-x-www-form-urlencoded-parameters/post-x-www-form-urlencoded-parameters.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-x-www-form-urlencoded-parameters/post-x-www-form-urlencoded-parameters.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-x-www-form-urlencoded-parameters/post-x-www-form-urlencoded-parameters.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-x-www-form-urlencoded-parameters/post-x-www-form-urlencoded-parameters.sts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.authz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.creq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.req</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.sreq</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/aws-sig-v4-test-suite/aws-sig-v4-test-suite/post-x-www-form-urlencoded/post-x-www-form-urlencoded.sts</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -453,67 +303,53 @@
       <option name="presentableId" value="Default" />
       <updated>1524892760616</updated>
       <workItem from="1524892761888" duration="5952000" />
-      <workItem from="1524899264772" duration="4039000" />
-      <workItem from="1524904198197" duration="5955000" />
+      <workItem from="1524899264772" duration="5077000" />
+      <workItem from="1524908560835" duration="6888000" />
     </task>
-    <task id="LOCAL-00001" summary="Convert signature to text">
-      <created>1524906329002</created>
+    <task id="LOCAL-00001" summary="Fixed conversion from array to hex">
+      <created>1524909689621</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1524906329002</updated>
+      <updated>1524909689621</updated>
     </task>
-    <task id="LOCAL-00002" summary="Convert signature to text">
-      <created>1524908250679</created>
+    <task id="LOCAL-00002" summary="Working OK">
+      <created>1524911020540</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1524908250679</updated>
+      <updated>1524911020540</updated>
     </task>
-    <task id="LOCAL-00003" summary="Check expected header">
-      <created>1524912358462</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1524912358463</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Check expected header">
-      <created>1524912556289</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1524912556289</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15946000" />
+    <option name="totallyTimeSpent" value="17917000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="78" y="62" width="1026" height="995" extended-state="0" />
+    <frame x="-395" y="-1403" width="1587" height="1235" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2626168" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18640776" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45652175" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3618123" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Gerrit" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Code Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329294" sideWeight="0.49653122" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cabal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -523,7 +359,6 @@
       <window_info id="SvgViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971907" sideWeight="0.49713817" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="RemoteSynchronizer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293556" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="PsiViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295362" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -533,10 +368,37 @@
       <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299373" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="GhcMod" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Jenkins" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -544,9 +406,9 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Convert signature to text" />
-    <MESSAGE value="Check expected header" />
-    <option name="LAST_COMMIT_MESSAGE" value="Check expected header" />
+    <MESSAGE value="Fixed conversion from array to hex" />
+    <MESSAGE value="Working OK" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working OK" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -558,45 +420,36 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>authorizationHeader</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>canonicalHeaders</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/send_to_aws_kinesis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2000">
-          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-          <folding>
-            <element signature="e#731#1152#0" expanded="false" />
-            <element signature="e#1169#1842#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/send_to_aws_kinesis.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#731#1152#0" expanded="false" />
-            <element signature="e#1169#1842#0" expanded="false" />
+            <element signature="e#11616#12187#0" expanded="false" />
+            <element signature="e#12264#12310#0" expanded="false" />
+            <element signature="e#15229#15242#0" expanded="true" />
+            <element signature="e#20428#20441#0" expanded="true" />
+            <marker date="1524918637000" expanded="false" signature="11465:24784" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -610,11 +463,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/send_to_aws_kinesis.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-124">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#731#1152#0" expanded="false" />
-            <element signature="e#1169#1842#0" expanded="false" />
+            <element signature="e#11616#12187#0" expanded="false" />
+            <element signature="e#12264#12310#0" expanded="false" />
+            <element signature="e#15229#15242#0" expanded="true" />
+            <element signature="e#20428#20441#0" expanded="true" />
+            <marker date="1524918637000" expanded="false" signature="11465:24784" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/send_to_aws_kinesis.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="881" column="0" lean-forward="true" selection-start-line="881" selection-start-column="0" selection-end-line="881" selection-end-column="0" />
+          <folding>
+            <element signature="e#11616#12187#0" expanded="false" />
+            <element signature="e#12264#12310#0" expanded="false" />
+            <element signature="e#15229#15242#0" expanded="true" />
+            <element signature="e#20428#20441#0" expanded="true" />
+            <marker date="1524918637000" expanded="false" signature="11465:24784" ph="..." />
           </folding>
         </state>
       </provider>

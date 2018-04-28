@@ -2,6 +2,8 @@
   <dictionary name="Luppy">
     <words>
       <w>datestamp</w>
+      <w>jsbase</w>
+      <w>kinesis</w>
       <w>querystring</w>
     </words>
   </dictionary>

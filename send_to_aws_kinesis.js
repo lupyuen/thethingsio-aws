@@ -1,23 +1,39 @@
+//  region AWS Settings - FILL IN YOUR OWN AWS SETTINGS HERE
+//  This is a thethings.io Cloud Function that sends the Cloud Function Params as a JSON data record to the AWS
+//  Kinesis Stream declared below.
+
 const AWSAccessKeyId = 'AKIAJCJ2TMJQ7JJ2QZ6A';
 const AWSSecretAccessKey = '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';
 const AWSRegion = 'ap-southeast-1';
+const AWSKinesisStream = 'sigfox-sensor-stream';
+
+//  //////////////////////////////////////////////////////////////////////////////////// endregion
+//  region AWS Kinesis Declarations (Do Not Change)
 
 const AWSService = 'kinesis';
-const AWSHost = `${AWSService}.${AWSRegion}.amazonaws.com`;  //  e.g. dynamodb.us-west-2.amazonaws.com
-const AWSEndpoint = `https://${AWSHost}/`;  //  e.g. https://dynamodb.us-west-2.amazonaws.com/
+const AWSTarget = 'Kinesis_20131202.PutRecord';  //  Invoke the PutRecord API to add sensor records.
+const AWSHost = `${AWSService}.${AWSRegion}.amazonaws.com`;  //  e.g. kinesis.us-west-2.amazonaws.com
+const AWSEndpoint = `https://${AWSHost}/`;  //  e.g. https://kinesis.us-west-2.amazonaws.com/
 const AWSQueryString = '';
 const AWSMethod = 'POST';
-const AWSContentType = 'application/x-amz-json-1.0';
-const unittest = typeof process !== 'undefined' && process && process.env && process.env.UNITTEST;
-
+const AWSContentType = 'application/x-amz-json-1.1';
+const unittest = typeof process !== 'undefined' && process && process.env && process.env.UNITTEST;  //  True for unit test.
 let fastsha256 = null;
+let jsbase64 = null, Base64 = null;
+
+//  //////////////////////////////////////////////////////////////////////////////////// endregion
+//  region Main Function
 
 function main(params, callback){
-  // console.log({fastsha256});
-  // console.log('hmac', typeof fastsha256.hmac);
-
-  /*
-  const body = JSON.stringify({});
+  //  Send the params as a JSON data record to the AWS Kinesis Stream declared above.
+  const base64Params = jsbase64.encode(JSON.stringify(params));  //  Params JSON doc encoded in Base64.
+  const body = {
+    StreamName: AWSKinesisStream,
+    Data: base64Params,
+    PartitionKey: '0',  //  Change this to compute the partition key if you need to support high data volume with multiple partitions.
+    //  Optional Field: ExplicitHashKey, used to explicitly determine the shard the data record is assigned to by overriding the partition key hash.
+    //  Optional Field: SequenceNumberForOrdering, guarantees strictly increasing sequence numbers, for puts from the same client and to the same partition key.
+  };
   const para = {
     accessKey: AWSAccessKeyId,
     secretKey: AWSSecretAccessKey,
@@ -27,37 +43,21 @@ function main(params, callback){
     queryString: AWSQueryString,
     contentType: AWSContentType,
     host: AWSHost,
-    body,
+    body: JSON.stringify(body),
     region: AWSRegion,
     service: AWSService,
+    target: AWSTarget,
   };
-  */
-
-  const para = {
-    amzDate: unittest ? '20150830T123600Z' : null, ////
-    accessKey: 'AKIDEXAMPLE',
-    secretKey: AWSSecretAccessKey,
-    method: 'GET',
-    //  The part of the URI from domain to query.  '/' if no path.
-    uri: '/',
-    queryString: 'Action=ListUsers&Version=2010-05-08',
-    contentType: 'application/x-www-form-urlencoded; charset=utf-8',
-    host: 'iam.amazonaws.com',
-    body: '',
-    region: 'us-east-1',
-    service: 'iam',
-    expectedAuthorizationHeader: 'AWS4-HMAC-SHA256 Credential=AKIDEXAMPLE/20150830/us-east-1/iam/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=5d672d79c15b13162d9279b0855cfba6789a8edb4c82c400e06b5924a6f2b5d7',
-  };
+  //  Compose the signed AWS request header.
   const headers = composeAWSRequestHeader(para);
+
+  //  Send the request.
   // console.log({headers});
-  callback(null, headers);
+  callback(null, { headers, body, params });
 }
 
-//  Unit Test
-if (unittest) {
-  setTimeout(() => main({}, (error, result) =>
-    console.log(error, result)), 1000);
-}
+//  //////////////////////////////////////////////////////////////////////////////////// endregion
+//  region
 
 /*
 Sample Request:
@@ -88,6 +88,9 @@ Date: <Date>
 }
  */
 
+//  //////////////////////////////////////////////////////////////////////////////////// endregion
+//  region Functions for signing AWS requests
+
 function composeAWSRequestHeader(para) {
   //  Compose a signed AWS request header. Based on https://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html#sig-v4-examples-post
   if (!para.accessKey) throw new Error('missing accessKey');
@@ -114,34 +117,29 @@ function composeAWSRequestHeader(para) {
   // Step 1 is to define the verb (GET, POST, etc.)
   // e.g. method = 'POST'
 
-  // Step 2: Create canonical URI--the part of the URI from domain to query
-  // string (use '/' if no path)
-  // e.g. canonical_uri = '/';
+  // Step 2: Create canonical URI--the part of the URI from domain to query string (use '/' if no path)
+  // e.g. uri = '/';
 
   // Step 3: Create the canonical query string. In this example, request
   // parameters are passed in the body of the request and the query string is blank.
-  // e.g. canonical_querystring = '';
+  // e.g. queryString = '';
 
-  // Step 4: Create the canonical headers. Header names must be trimmed
-  // and lowercase, and sorted in code point order from low to high.
-  // Note that there is a trailing \n.
-  const canonicalHeaders =
+  // Step 4: Create the canonical headers. Header names must be trimmed and lowercase, and sorted in code point order
+  // from low to high.  Add the target if any. Note that there is a trailing \n.
+  let canonicalHeaders =
     'content-type:' + para.contentType + '\n' +
     'host:' + para.host + '\n' +
     'x-amz-date:' + amzDate + '\n';
-    // 'x-amz-target:' + amz_target + '\n';
+  if (para.target) canonicalHeaders += 'x-amz-target:' + para.target + '\n';
 
-  // Step 5: Create the list of signed headers. This lists the headers
-  // in the canonicalHeaders list, delimited with ";" and in alpha order.
-  // Note: The request can include any headers; canonicalHeaders and
-  // signedHeaders include those that you want to be included in the
-  // hash of the request. "Host" and "x-amz-date" are always required.
-  // For DynamoDB, content-type and x-amz-target are also required.
-  // signedHeaders = 'content-type;host;x-amz-date;x-amz-target';
-  const signedHeaders = 'content-type;host;x-amz-date';
+  // Step 5: Create the list of signed headers. This lists the headers in the canonicalHeaders list,
+  // delimited with ";" and in alpha order. Note: The request can include any headers; canonicalHeaders and
+  // signedHeaders include those that you want to be included in the hash of the request. "Host" and "x-amz-date" are
+  // always required. For Kinesis, content-type and x-amz-target are also required.
+  let signedHeaders = 'content-type;host;x-amz-date';
+  if (para.target) signedHeaders += ';x-amz-target';
 
-  // Step 6: Create payload hash. In this example, the payload (body of
-  // the request) contains the request parameters.
+  // Step 6: Create payload hash. In this example, the payload (body of the request) contains the request parameters.
   const payloadHash = sha256hash(para.body);
 
   // Step 7: Combine elements to create canonical request
@@ -172,18 +170,18 @@ function composeAWSRequestHeader(para) {
     'SignedHeaders=' + signedHeaders + ', ' +
     'Signature=' + signatureStr;
 
-  // For DynamoDB, the request can include any headers, but MUST include "host", "x-amz-date",
-  // "x-amz-target", "content-type", and "Authorization". Except for the authorization
-  // header, the headers must be included in the canonicalHeaders and signedHeaders values, as
-  // noted earlier. Order here is not significant.
+  // For Kinesis, the request can include any headers, but MUST include "host", "x-amz-date",
+  // "x-amz-target", "content-type", and "Authorization". Except for the authorization header, the headers must be
+  // included in the canonicalHeaders and signedHeaders values, as noted earlier. Order here is not significant.
   const headers = {
     'Content-Type': para.contentType,
     'Host': para.host,
     'X-Amz-Date': amzDate,
-    // 'X-Amz-Target': amz_target,
     'Authorization': authorizationHeader
   };
-  // Unit Test: Check the authorization header.
+  if (para.target) headers['X-Amz-Target'] = para.target;
+
+  // Unit Test: Check whether the signed authorization header matches the expected header.
   if (unittest && para.expectedAuthorizationHeader) {
     if (authorizationHeader === para.expectedAuthorizationHeader)
       console.log('*** Unit Test: Expected authorization header OK');
@@ -194,9 +192,7 @@ function composeAWSRequestHeader(para) {
       authorizationHeader,
     ].join('\n'));
   }
-
-  // ************* SEND THE REQUEST *************
-  // r = requests.post(endpoint, data=request_parameters, headers=headers);
+  //  Return the signed AWS request headers.
   return headers;
 }
 
@@ -208,6 +204,9 @@ function getSignatureKey(key, dateStamp, regionName, serviceName) {
   const kSigning = sha256hmac("aws4_request", kService);
   return kSigning;
 }
+
+//  //////////////////////////////////////////////////////////////////////////////////// endregion
+//  region SHA-256 Hash Functions
 
 function sha256hmac(text, key) {
   //  Sign the text string with the key using SHA-256.  key may be a text string or a UTF8 byte array.
@@ -268,19 +267,6 @@ function stringToUtf8ByteArray(str) {
   return out;
 }
 
-function NOTUSED() {
-  var params = {
-    Data: new Buffer('...') || 'STRING_VALUE' /* Strings will be Base-64 encoded on your behalf */, /* required */
-    PartitionKey: 'STRING_VALUE', /* required */
-    StreamName: 'STRING_VALUE', /* required */
-    ExplicitHashKey: 'STRING_VALUE',
-    SequenceNumberForOrdering: 'STRING_VALUE'
-  };
-  kinesis.putRecord(params, function(err, data) {
-    if (err) console.log(err, err.stack); // an error occurred
-    else     console.log(data);           // successful response
-  });
-}
 
 fastsha256 =
   //  Fast SHA-256 implementation (with 1 line of code change) from https://github.com/dchest/fast-sha256-js
@@ -662,3 +648,269 @@ fastsha256 =
     exports.pbkdf2 = pbkdf2;
   });
 //  End of https://github.com/dchest/fast-sha256-js
+
+//  //////////////////////////////////////////////////////////////////////////////////// endregion
+//  region Base-64 Encoding Function
+//  From https://raw.githubusercontent.com/dankogai/js-base64/master/base64.js with one line of code added.
+/*
+ *  base64.js
+ *
+ *  Licensed under the BSD 3-Clause License.
+ *    http://opensource.org/licenses/BSD-3-Clause
+ *
+ *  References:
+ *    http://en.wikipedia.org/wiki/Base64
+ */
+;(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined'
+    ? module.exports = factory(global)
+    : typeof define === 'function' && define.amd
+    ? define(factory) : factory(global)
+}((
+  typeof self !== 'undefined' ? self
+    : typeof window !== 'undefined' ? window
+    : typeof global !== 'undefined' ? global
+      : this
+), function(global) {
+  'use strict';
+  // existing version for noConflict()
+  var _Base64 = global.Base64;
+  var version = "2.4.3";
+  // if node.js, we use Buffer
+  var buffer;
+  if (typeof module !== 'undefined' && module.exports) {
+    try {
+      buffer = require('buffer').Buffer;
+    } catch (err) {}
+  }
+  // constants
+  var b64chars
+    = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
+  var b64tab = function(bin) {
+    var t = {};
+    for (var i = 0, l = bin.length; i < l; i++) t[bin.charAt(i)] = i;
+    return t;
+  }(b64chars);
+  var fromCharCode = String.fromCharCode;
+  // encoder stuff
+  var cb_utob = function(c) {
+    if (c.length < 2) {
+      var cc = c.charCodeAt(0);
+      return cc < 0x80 ? c
+        : cc < 0x800 ? (fromCharCode(0xc0 | (cc >>> 6))
+          + fromCharCode(0x80 | (cc & 0x3f)))
+          : (fromCharCode(0xe0 | ((cc >>> 12) & 0x0f))
+            + fromCharCode(0x80 | ((cc >>>  6) & 0x3f))
+            + fromCharCode(0x80 | ( cc         & 0x3f)));
+    } else {
+      var cc = 0x10000
+        + (c.charCodeAt(0) - 0xD800) * 0x400
+        + (c.charCodeAt(1) - 0xDC00);
+      return (fromCharCode(0xf0 | ((cc >>> 18) & 0x07))
+        + fromCharCode(0x80 | ((cc >>> 12) & 0x3f))
+        + fromCharCode(0x80 | ((cc >>>  6) & 0x3f))
+        + fromCharCode(0x80 | ( cc         & 0x3f)));
+    }
+  };
+  var re_utob = /[\uD800-\uDBFF][\uDC00-\uDFFFF]|[^\x00-\x7F]/g;
+  var utob = function(u) {
+    return u.replace(re_utob, cb_utob);
+  };
+  var cb_encode = function(ccc) {
+    var padlen = [0, 2, 1][ccc.length % 3],
+      ord = ccc.charCodeAt(0) << 16
+        | ((ccc.length > 1 ? ccc.charCodeAt(1) : 0) << 8)
+        | ((ccc.length > 2 ? ccc.charCodeAt(2) : 0)),
+      chars = [
+        b64chars.charAt( ord >>> 18),
+        b64chars.charAt((ord >>> 12) & 63),
+        padlen >= 2 ? '=' : b64chars.charAt((ord >>> 6) & 63),
+        padlen >= 1 ? '=' : b64chars.charAt(ord & 63)
+      ];
+    return chars.join('');
+  };
+  var btoa = global.btoa ? function(b) {
+    return global.btoa(b);
+  } : function(b) {
+    return b.replace(/[\s\S]{1,3}/g, cb_encode);
+  };
+  var _encode = buffer ?
+    buffer.from && Uint8Array && buffer.from !== Uint8Array.from
+      ? function (u) {
+        return (u.constructor === buffer.constructor ? u : buffer.from(u))
+          .toString('base64')
+      }
+      :  function (u) {
+        return (u.constructor === buffer.constructor ? u : new  buffer(u))
+          .toString('base64')
+      }
+    : function (u) { return btoa(utob(u)) }
+  ;
+  var encode = function(u, urisafe) {
+    return !urisafe
+      ? _encode(String(u))
+      : _encode(String(u)).replace(/[+\/]/g, function(m0) {
+        return m0 == '+' ? '-' : '_';
+      }).replace(/=/g, '');
+  };
+  var encodeURI = function(u) { return encode(u, true) };
+  // decoder stuff
+  var re_btou = new RegExp([
+    '[\xC0-\xDF][\x80-\xBF]',
+    '[\xE0-\xEF][\x80-\xBF]{2}',
+    '[\xF0-\xF7][\x80-\xBF]{3}'
+  ].join('|'), 'g');
+  var cb_btou = function(cccc) {
+    switch(cccc.length) {
+      case 4:
+        var cp = ((0x07 & cccc.charCodeAt(0)) << 18)
+          |    ((0x3f & cccc.charCodeAt(1)) << 12)
+          |    ((0x3f & cccc.charCodeAt(2)) <<  6)
+          |     (0x3f & cccc.charCodeAt(3)),
+          offset = cp - 0x10000;
+        return (fromCharCode((offset  >>> 10) + 0xD800)
+          + fromCharCode((offset & 0x3FF) + 0xDC00));
+      case 3:
+        return fromCharCode(
+          ((0x0f & cccc.charCodeAt(0)) << 12)
+          | ((0x3f & cccc.charCodeAt(1)) << 6)
+          |  (0x3f & cccc.charCodeAt(2))
+        );
+      default:
+        return  fromCharCode(
+          ((0x1f & cccc.charCodeAt(0)) << 6)
+          |  (0x3f & cccc.charCodeAt(1))
+        );
+    }
+  };
+  var btou = function(b) {
+    return b.replace(re_btou, cb_btou);
+  };
+  var cb_decode = function(cccc) {
+    var len = cccc.length,
+      padlen = len % 4,
+      n = (len > 0 ? b64tab[cccc.charAt(0)] << 18 : 0)
+        | (len > 1 ? b64tab[cccc.charAt(1)] << 12 : 0)
+        | (len > 2 ? b64tab[cccc.charAt(2)] <<  6 : 0)
+        | (len > 3 ? b64tab[cccc.charAt(3)]       : 0),
+      chars = [
+        fromCharCode( n >>> 16),
+        fromCharCode((n >>>  8) & 0xff),
+        fromCharCode( n         & 0xff)
+      ];
+    chars.length -= [0, 0, 2, 1][padlen];
+    return chars.join('');
+  };
+  var atob = global.atob ? function(a) {
+    return global.atob(a);
+  } : function(a){
+    return a.replace(/[\s\S]{1,4}/g, cb_decode);
+  };
+  var _decode = buffer ?
+    buffer.from && Uint8Array && buffer.from !== Uint8Array.from
+      ? function(a) {
+        return (a.constructor === buffer.constructor
+          ? a : buffer.from(a, 'base64')).toString();
+      }
+      : function(a) {
+        return (a.constructor === buffer.constructor
+          ? a : new buffer(a, 'base64')).toString();
+      }
+    : function(a) { return btou(atob(a)) };
+  var decode = function(a){
+    return _decode(
+      String(a).replace(/[-_]/g, function(m0) { return m0 == '-' ? '+' : '/' })
+        .replace(/[^A-Za-z0-9\+\/]/g, '')
+    );
+  };
+  var noConflict = function() {
+    var Base64 = global.Base64;
+    global.Base64 = _Base64;
+    return Base64;
+  };
+  // export Base64
+  global.Base64 = {
+    VERSION: version,
+    atob: atob,
+    btoa: btoa,
+    fromBase64: decode,
+    toBase64: encode,
+    utob: utob,
+    encode: encode,
+    encodeURI: encodeURI,
+    btou: btou,
+    decode: decode,
+    noConflict: noConflict
+  };
+  // if ES5 is available, make Base64.extendString() available
+  if (typeof Object.defineProperty === 'function') {
+    var noEnum = function(v){
+      return {value:v,enumerable:false,writable:true,configurable:true};
+    };
+    global.Base64.extendString = function () {
+      Object.defineProperty(
+        String.prototype, 'fromBase64', noEnum(function () {
+          return decode(this)
+        }));
+      Object.defineProperty(
+        String.prototype, 'toBase64', noEnum(function (urisafe) {
+          return encode(this, urisafe)
+        }));
+      Object.defineProperty(
+        String.prototype, 'toBase64URI', noEnum(function () {
+          return encode(this, true)
+        }));
+    };
+  }
+  //
+  // export Base64 to the namespace
+  //
+  if (global['Meteor']) { // Meteor.js
+    Base64 = global.Base64;
+  }
+  // module.exports and AMD are mutually exclusive.
+  // module.exports has precedence.
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports.Base64 = global.Base64;
+  }
+  else if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define([], function(){ return global.Base64 });
+  }
+
+  jsbase64 = global.Base64; //// Added to https://raw.githubusercontent.com/dankogai/js-base64/master/base64.js
+
+  // that's it!
+  return {Base64: global.Base64}
+}));
+//  End of https://raw.githubusercontent.com/dankogai/js-base64/master/base64.js
+
+//  //////////////////////////////////////////////////////////////////////////////////// endregion
+//  region Unit Test
+
+//  Run Unit Test on local machine
+if (unittest) {
+  setTimeout(() => main({tmp: 28.9}, (error, result) =>
+    console.log(error, result)), 1000);
+}
+
+let testPara = {};  //  Sample AWS requests for unit testing.
+if (unittest) {
+  testPara.sample = {  //  From https://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html
+    amzDate: unittest ? '20150830T123600Z' : null, ////
+    accessKey: 'AKIDEXAMPLE',
+    secretKey: AWSSecretAccessKey,
+    method: 'GET',
+    //  The part of the URI from domain to query.  '/' if no path.
+    uri: '/',
+    queryString: 'Action=ListUsers&Version=2010-05-08',
+    contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+    host: 'iam.amazonaws.com',
+    body: '',
+    region: 'us-east-1',
+    service: 'iam',
+    expectedAuthorizationHeader: 'AWS4-HMAC-SHA256 Credential=AKIDEXAMPLE/20150830/us-east-1/iam/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=5d672d79c15b13162d9279b0855cfba6789a8edb4c82c400e06b5924a6f2b5d7',
+  };
+}
+
+//  //////////////////////////////////////////////////////////////////////////////////// endregion
