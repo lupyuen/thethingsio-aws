@@ -143,14 +143,15 @@ function composeAWSRequestHeader(para) {
   const signingKey = getSignatureKey(secretKey, datestamp, region, service);
 
   // Sign the stringToSign using the signingKey
-  const signature = sha256hmac(signingKey, stringToSign);
+  const signature = sha256hmac(stringToSign, signingKey);
+  const signatureStr = byteArrayToHex(signature);  //  Convert to hex string.
 
   // ************* TASK 4: ADD SIGNING INFORMATION TO THE REQUEST *************
   // Put the signature information in a header named Authorization.
   const authorizationHeader = algorithm + ' ' +
     'Credential=' + accessKey + '/' + credentialScope + ', ' +
     'SignedHeaders=' + signedHeaders + ', ' +
-    'Signature=' + signature;
+    'Signature=' + signatureStr;
 
   // For DynamoDB, the request can include any headers, but MUST include "host", "x-amz-date",
   // "x-amz-target", "content-type", and "Authorization". Except for the authorization
@@ -181,6 +182,7 @@ function getSignatureKey(key, dateStamp, regionName, serviceName) {
 function sha256hmac(text, key) {
   //  Sign the text string with the key using SHA-256.  key may be a text string or a UTF8 byte array.
   //  Returns a UTF8 byte array.
+  if (typeof text !== 'string') throw new Error('not_string');
   const binaryKey = (typeof key === 'string')
     ? stringToUtf8ByteArray(key)  //  Convert text key to binary.
     : key;  //  Key is already binary.
@@ -189,12 +191,20 @@ function sha256hmac(text, key) {
 
 function sha256hash(text) {
   //  Hash the text string with SHA-256.  Returns a string of lowercase hex digits e.g. 'a1b2c3'
+  if (typeof text !== 'string') throw new Error('not_string');
   const hash = fastsha256.hash(stringToUtf8ByteArray(text));
-  return hash.map(byte => ((byte < 16) ? '0' : '') + byte.toString(16).toLowerCase()).join('');
+  return byteArrayToHex(hash);
+}
+
+function byteArrayToHex(arr) {
+  //  Given an array of bytes, return a hex string like 'a1b2c3'.
+  if (typeof arr === 'string') throw new Error('not_byte_array');
+  return arr.map(byte => ((byte < 16) ? '0' : '') + byte.toString(16).toLowerCase()).join('');
 }
 
 function stringToUtf8ByteArray(str) {
   //  Convert Unicode string to UTF-8 byte array.
+  if (typeof str !== 'string') throw new Error('not_string');
   const out = [];
   let p = 0;
   for (let i = 0; i < str.length; i++) {
