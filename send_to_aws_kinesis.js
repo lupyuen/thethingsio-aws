@@ -52,12 +52,42 @@ function main(params, callback){
   const headers = composeAWSRequestHeader(para);
 
   //  Send the request.
-  // console.log({headers});
-  callback(null, { headers, body, params });
+  return sendAWSRequest(para, headers, callback);
 }
 
 //  //////////////////////////////////////////////////////////////////////////////////// endregion
-//  region
+//  region AWS Request
+
+function sendAWSRequest(para, headers, callback) {
+  //  Send the signed AWS request.  Call the callback when done.
+  const body = para.body;
+  const req = {
+    host: para.host,  //  e.g. kinesis.us-west-2.amazonaws.com
+    path: para.uri + (
+      para.queryString
+        ? `?{para.queryString}`
+        : ''
+    ),
+    port: 443,
+    secure: true,
+    method: para.method,
+    headers,
+  };
+  console.log('*** sendAWSRequest', { req });
+  return httpRequest(req, body, (error, response) => {
+    if (error) {  //  Suppress the error so caller won't retry.
+      console.error('*** sendAWSRequest error', error.message, error.stack);
+      return callback(null, error.message);
+    }
+    const result = response.result;
+    console.log(['*** sendAWSRequest', new Date().toISOString(), JSON.stringify({ result, req, response }, null, 2)].join('-'.repeat(5)));
+    console.log('request=', req);
+    console.log('body=', body);
+    console.log('response=', response);
+    console.log('result=', result);
+    return callback(null, result);
+  });
+}
 
 /*
 Sample Request:
@@ -93,6 +123,7 @@ Date: <Date>
 
 function composeAWSRequestHeader(para) {
   //  Compose a signed AWS request header. Based on https://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html#sig-v4-examples-post
+  //  TODO: Handle special characters in the URL.
   if (!para.accessKey) throw new Error('missing accessKey');
   if (!para.secretKey) throw new Error('missing secretKey');
   if (!para.method) throw new Error('missing method');
