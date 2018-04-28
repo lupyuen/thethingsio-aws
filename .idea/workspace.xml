@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2aefaf11-0bbb-4c6c-81d1-9f81b9b7f842" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/sigfox_parser.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/sigfox_parser.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/send_to_aws_kinesis.js" afterPath="$PROJECT_DIR$/send_to_aws_kinesis.js" />
+      <change beforePath="$PROJECT_DIR$/sigfox_parser.js" afterPath="$PROJECT_DIR$/sigfox_parser.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,12 +27,12 @@
                 <state relative-caret-position="1220">
                   <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
                   <folding>
-                    <element signature="e#13163#13734#0" expanded="false" />
-                    <element signature="e#13811#13857#0" expanded="false" />
-                    <element signature="e#16776#16789#0" expanded="true" />
-                    <element signature="e#21975#21988#0" expanded="true" />
-                    <element signature="e#26432#26468#0" expanded="false" />
-                    <marker date="1524926399000" expanded="true" signature="13012:26331" ph="..." />
+                    <element signature="e#13145#13716#0" expanded="false" />
+                    <element signature="e#13793#13839#0" expanded="false" />
+                    <element signature="e#16758#16771#0" expanded="true" />
+                    <element signature="e#21957#21970#0" expanded="true" />
+                    <element signature="e#26414#26450#0" expanded="false" />
+                    <marker date="1524941650000" expanded="true" signature="12994:26313" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -39,8 +41,8 @@
           <file leaf-file-name="sigfox_parser.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/sigfox_parser.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="800">
-                  <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+                <state relative-caret-position="960">
+                  <caret line="49" column="3" lean-forward="true" selection-start-line="49" selection-start-column="3" selection-end-line="49" selection-end-column="3" />
                   <folding />
                 </state>
               </provider>
@@ -63,15 +65,15 @@
           <file leaf-file-name="send_to_aws_kinesis.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/send_to_aws_kinesis.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="280">
-                  <caret line="14" column="101" lean-forward="true" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="101" />
+                <state relative-caret-position="511">
+                  <caret line="222" column="0" lean-forward="false" selection-start-line="222" selection-start-column="0" selection-end-line="232" selection-end-column="3" />
                   <folding>
-                    <element signature="e#10979#11012#0" expanded="false" />
-                    <element signature="e#13163#13734#0" expanded="false" />
-                    <element signature="e#13811#13857#0" expanded="false" />
-                    <element signature="e#16776#16789#0" expanded="true" />
-                    <element signature="e#21975#21988#0" expanded="true" />
-                    <element signature="e#26432#26468#0" expanded="false" />
+                    <element signature="e#10961#10994#0" expanded="false" />
+                    <element signature="e#13145#13716#0" expanded="false" />
+                    <element signature="e#13793#13839#0" expanded="false" />
+                    <element signature="e#16758#16771#0" expanded="true" />
+                    <element signature="e#21957#21970#0" expanded="true" />
+                    <element signature="e#26414#26450#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -134,8 +136,8 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-415" />
-    <option name="y" value="-1403" />
+    <option name="x" value="-399" />
+    <option name="y" value="-1401" />
     <option name="width" value="1935" />
     <option name="height" value="1235" />
   </component>
@@ -333,6 +335,12 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Node.js.sigfox_parser">
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.send_to_aws_kinesis" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.sigfox_parser" />
+    </list>
+  </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
@@ -345,7 +353,7 @@
       <updated>1524892760616</updated>
       <workItem from="1524892761888" duration="5952000" />
       <workItem from="1524899264772" duration="5077000" />
-      <workItem from="1524908560835" duration="15579000" />
+      <workItem from="1524908560835" duration="17783000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed conversion from array to hex">
       <created>1524909689621</created>
@@ -396,14 +404,21 @@
       <option name="project" value="LOCAL" />
       <updated>1524926784964</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Parsing payload">
+      <created>1524939535909</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1524939535909</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26608000" />
+    <option name="totallyTimeSpent" value="28812000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-415" y="-1403" width="1935" height="1235" extended-state="0" />
+    <frame x="-399" y="-1401" width="1935" height="1235" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -487,7 +502,8 @@
     <MESSAGE value="Compose Kinesis request" />
     <MESSAGE value="Sending HTTP request to AWS" />
     <MESSAGE value="Send HTTP request to AWS working OK" />
-    <option name="LAST_COMMIT_MESSAGE" value="Send HTTP request to AWS working OK" />
+    <MESSAGE value="Parsing payload" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parsing payload" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -499,7 +515,7 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -523,12 +539,12 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#13163#13734#0" expanded="false" />
-            <element signature="e#13811#13857#0" expanded="false" />
-            <element signature="e#16776#16789#0" expanded="true" />
-            <element signature="e#21975#21988#0" expanded="true" />
-            <element signature="e#26432#26468#0" expanded="false" />
-            <marker date="1524926399000" expanded="true" signature="13012:26331" ph="..." />
+            <element signature="e#13145#13716#0" expanded="false" />
+            <element signature="e#13793#13839#0" expanded="false" />
+            <element signature="e#16758#16771#0" expanded="true" />
+            <element signature="e#21957#21970#0" expanded="true" />
+            <element signature="e#26414#26450#0" expanded="false" />
+            <marker date="1524941650000" expanded="true" signature="12994:26313" ph="..." />
           </folding>
         </state>
       </provider>
@@ -546,12 +562,12 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#13163#13734#0" expanded="false" />
-            <element signature="e#13811#13857#0" expanded="false" />
-            <element signature="e#16776#16789#0" expanded="true" />
-            <element signature="e#21975#21988#0" expanded="true" />
-            <element signature="e#26432#26468#0" expanded="false" />
-            <marker date="1524926399000" expanded="true" signature="13012:26331" ph="..." />
+            <element signature="e#13145#13716#0" expanded="false" />
+            <element signature="e#13793#13839#0" expanded="false" />
+            <element signature="e#16758#16771#0" expanded="true" />
+            <element signature="e#21957#21970#0" expanded="true" />
+            <element signature="e#26414#26450#0" expanded="false" />
+            <marker date="1524941650000" expanded="true" signature="12994:26313" ph="..." />
           </folding>
         </state>
       </provider>
@@ -585,20 +601,20 @@
         <state relative-caret-position="1220">
           <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding>
-            <element signature="e#13163#13734#0" expanded="false" />
-            <element signature="e#13811#13857#0" expanded="false" />
-            <element signature="e#16776#16789#0" expanded="true" />
-            <element signature="e#21975#21988#0" expanded="true" />
-            <element signature="e#26432#26468#0" expanded="false" />
-            <marker date="1524926399000" expanded="true" signature="13012:26331" ph="..." />
+            <element signature="e#13145#13716#0" expanded="false" />
+            <element signature="e#13793#13839#0" expanded="false" />
+            <element signature="e#16758#16771#0" expanded="true" />
+            <element signature="e#21957#21970#0" expanded="true" />
+            <element signature="e#26414#26450#0" expanded="false" />
+            <marker date="1524941650000" expanded="true" signature="12994:26313" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sigfox_parser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="960">
+          <caret line="49" column="3" lean-forward="true" selection-start-line="49" selection-start-column="3" selection-end-line="49" selection-end-column="3" />
           <folding />
         </state>
       </provider>
