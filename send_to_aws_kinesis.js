@@ -59,6 +59,35 @@ if (unittest) {
     console.log(error, result)), 1000);
 }
 
+/*
+Sample Request:
+POST / HTTP/1.1
+Host: kinesis.<region>.<domain>
+Content-Length: <PayloadSizeBytes>
+User-Agent: <UserAgentString>
+Content-Type: application/x-amz-json-1.1
+Authorization: <AuthParams>
+Connection: Keep-Alive
+X-Amz-Date: <Date>
+X-Amz-Target: Kinesis_20131202.PutRecord
+{
+  "StreamName": "exampleStreamName",
+  "Data": "XzxkYXRhPl8x",
+  "PartitionKey": "partitionKey"
+}
+
+Sample Response:
+HTTP/1.1 200 OK
+x-amzn-RequestId: <RequestId>
+Content-Type: application/x-amz-json-1.1
+Content-Length: <PayloadSizeBytes>
+Date: <Date>
+{
+  "SequenceNumber": "21269319989653637946712965403778482177",
+  "ShardId": "shardId-000000000001"
+}
+ */
+
 function composeAWSRequestHeader(para) {
   //  Compose a signed AWS request header. Based on https://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html#sig-v4-examples-post
   if (!para.accessKey) throw new Error('missing accessKey');
