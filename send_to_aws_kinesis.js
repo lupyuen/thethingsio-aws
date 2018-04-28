@@ -26,6 +26,8 @@ let jsbase64 = null, Base64 = null;
 
 function main(params, callback){
   //  Send the params as a JSON data record to the AWS Kinesis Stream declared above.
+  //  Set the "timestamp" field if not set.
+  if (!params.timestamp) params.timestamp = new Date().toISOString();
   const base64Params = jsbase64.encode(JSON.stringify(params));  //  Params JSON doc encoded in Base64.
   const body = {
     StreamName: AWSKinesisStream,
@@ -43,7 +45,7 @@ function main(params, callback){
     queryString: AWSQueryString,
     contentType: AWSContentType,
     host: AWSHost,
-    body: JSON.stringify(body),
+    body,
     region: AWSRegion,
     service: AWSService,
     target: AWSTarget,
@@ -73,7 +75,8 @@ function sendAWSRequest(para, headers, callback) {
     method: para.method,
     headers,
   };
-  console.log('*** sendAWSRequest', { req });
+  console.log('*** sendAWSRequest', { req, body });
+  //  httpRequest only sends JSON bodies, not string bodies.
   return httpRequest(req, body, (error, response) => {
     if (error) {  //  Suppress the error so caller won't retry.
       console.error('*** sendAWSRequest error', error.message, error.stack);
@@ -81,15 +84,13 @@ function sendAWSRequest(para, headers, callback) {
     }
     const result = response.result;
     console.log(['*** sendAWSRequest', new Date().toISOString(), JSON.stringify({ result, req, response }, null, 2)].join('-'.repeat(5)));
-    console.log('request=', req);
-    console.log('body=', body);
     console.log('response=', response);
     console.log('result=', result);
     return callback(null, result);
   });
 }
 
-/*
+/* From https://docs.aws.amazon.com/kinesis/latest/APIReference/API_PutRecord.html
 Sample Request:
 POST / HTTP/1.1
 Host: kinesis.<region>.<domain>
@@ -162,6 +163,7 @@ function composeAWSRequestHeader(para) {
     'host:' + para.host + '\n' +
     'x-amz-date:' + amzDate + '\n';
   if (para.target) canonicalHeaders += 'x-amz-target:' + para.target + '\n';
+  console.log({canonicalHeaders});
 
   // Step 5: Create the list of signed headers. This lists the headers in the canonicalHeaders list,
   // delimited with ";" and in alpha order. Note: The request can include any headers; canonicalHeaders and
@@ -169,15 +171,19 @@ function composeAWSRequestHeader(para) {
   // always required. For Kinesis, content-type and x-amz-target are also required.
   let signedHeaders = 'content-type;host;x-amz-date';
   if (para.target) signedHeaders += ';x-amz-target';
+  console.log({signedHeaders});
 
   // Step 6: Create payload hash. In this example, the payload (body of the request) contains the request parameters.
-  const payloadHash = sha256hash(para.body);
+  const body = JSON.stringify(para.body);
+  const payloadHash = sha256hash(body);
+  console.log({body});
 
   // Step 7: Combine elements to create canonical request
   const canonicalRequest = para.method + '\n' + para.uri + '\n' +
     para.queryString + '\n' + canonicalHeaders + '\n' +
     signedHeaders + '\n' + payloadHash;
   const canonicalRequestHash = sha256hash(canonicalRequest);
+  console.log({canonicalRequest, canonicalRequestHash});
 
   // ************* TASK 2: CREATE THE STRING TO SIGN*************
   // Match the algorithm to the hashing algorithm you use, either SHA-1 or SHA-256 (recommended)
@@ -185,6 +191,7 @@ function composeAWSRequestHeader(para) {
   const credentialScope = datestamp + '/' + para.region + '/' + para.service + '/' + 'aws4_request';
   const stringToSign = algorithm + '\n' +  amzDate + '\n' +
     credentialScope + '\n' + canonicalRequestHash;
+  console.log({stringToSign});
 
   // ************* TASK 3: CALCULATE THE SIGNATURE *************
   // Create the signing key using the function defined above.
@@ -200,6 +207,7 @@ function composeAWSRequestHeader(para) {
     'Credential=' + para.accessKey + '/' + credentialScope + ', ' +
     'SignedHeaders=' + signedHeaders + ', ' +
     'Signature=' + signatureStr;
+  console.log({authorizationHeader});
 
   // For Kinesis, the request can include any headers, but MUST include "host", "x-amz-date",
   // "x-amz-target", "content-type", and "Authorization". Except for the authorization header, the headers must be
