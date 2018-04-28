@@ -122,7 +122,7 @@ Date: <Date>
  */
 
 //  //////////////////////////////////////////////////////////////////////////////////// endregion
-//  region Functions for signing AWS requests
+//  region Sign AWS Request
 
 function composeAWSRequestHeader(para) {
   //  Compose a signed AWS request header. Based on https://docs.aws.amazon.com/general/latest/gr/sigv4-signed-request-examples.html#sig-v4-examples-post
@@ -934,7 +934,7 @@ if (unittest) {
   const params =
     {"tmp": 28.9}
   ; setTimeout(() => main(params, (error, result) =>
-    console.log(error, result)), 1000);
+    console.log({ error, result })), 1000);
 }
 
 let testPara = {};  //  Sample AWS requests for unit testing.
