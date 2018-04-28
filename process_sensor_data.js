@@ -42,12 +42,14 @@ function trigger(params, callback){
 //  Run Unit Test on local machine
 if (unittest) {
   const params =
-    { "action": "write", "values": [
-        { key: 'tmp', value: 28 },
-        { key: 'hmd', value: 48 },
-        { key: 'alt', value: 54 },
-        { key: 'mod', value: 29 },
-    ]}
+    { "action": "write", "values":
+      [
+        { "key": "tmp", "value": 28 },
+        { "key": "hmd", "value": 48 },
+        { "key": "alt", "value": 54 },
+        { "key": "mod", "value": 29 }
+      ]
+    }
   ; setTimeout(() => trigger(params, (error) =>
     console.log({ error })), 1000);
 }
