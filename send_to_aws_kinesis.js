@@ -1,8 +1,8 @@
-const AWSAccessKeyId = 'AKIAIOSFODNN7EXAMPLE';
-const AWSSecretAccessKey = 'wJalrXUtnFEMI/K7MDENG+bPxRfiCYEXAMPLEKEY';
-const AWSRegion = 'us-west-2';
+const AWSAccessKeyId = 'AKIAJCJ2TMJQ7JJ2QZ6A';
+const AWSSecretAccessKey = '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';
+const AWSRegion = 'ap-southeast-1';
 
-const AWSService = 'dynamodb';
+const AWSService = 'kinesis';
 const AWSHost = `${AWSService}.${AWSRegion}.amazonaws.com`;  //  e.g. dynamodb.us-west-2.amazonaws.com
 const AWSEndpoint = `https://${AWSHost}/`;  //  e.g. https://dynamodb.us-west-2.amazonaws.com/
 const AWSQueryString = '';
