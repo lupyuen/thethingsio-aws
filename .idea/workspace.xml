@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2aefaf11-0bbb-4c6c-81d1-9f81b9b7f842" name="Default" comment="Shift timestamp field to the front so Athena results look better">
+    <list default="true" id="2aefaf11-0bbb-4c6c-81d1-9f81b9b7f842" name="Default" comment="Minor update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/process_sensor_data.js" afterPath="$PROJECT_DIR$/process_sensor_data.js" />
+      <change beforePath="$PROJECT_DIR$/send_to_aws_kinesis.js" afterPath="$PROJECT_DIR$/send_to_aws_kinesis.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="send_to_aws_kinesis.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="send_to_aws_kinesis.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/send_to_aws_kinesis.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="700">
+              <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -37,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="process_sensor_data.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="process_sensor_data.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/process_sensor_data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+            <state relative-caret-position="400">
+              <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -73,8 +73,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/send_to_aws_kinesis.js" />
         <option value="$PROJECT_DIR$/process_sensor_data.js" />
+        <option value="$PROJECT_DIR$/send_to_aws_kinesis.js" />
       </list>
     </option>
   </component>
@@ -294,7 +294,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.process_sensor_data">
+  <component name="RunManager" selected="Node.js.send_to_aws_kinesis">
     <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Node.js.send_to_aws_kinesis" />
       <item index="1" class="java.lang.String" itemvalue="Node.js.process_sensor_data" />
@@ -313,7 +313,7 @@
       <updated>1524892760616</updated>
       <workItem from="1524892761888" duration="5952000" />
       <workItem from="1524899264772" duration="4039000" />
-      <workItem from="1524904198197" duration="13322000" />
+      <workItem from="1524904198197" duration="17464000" />
     </task>
     <task id="LOCAL-00001" summary="Convert signature to text">
       <created>1524906329002</created>
@@ -371,11 +371,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524947389540</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Minor update">
+      <created>1524960121208</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1524960121208</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23313000" />
+    <option name="totallyTimeSpent" value="27455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="78" y="62" width="975" height="995" extended-state="0" />
@@ -434,7 +441,8 @@
     <MESSAGE value="Convert signature to text" />
     <MESSAGE value="Check expected header" />
     <MESSAGE value="Shift timestamp field to the front so Athena results look better" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shift timestamp field to the front so Athena results look better" />
+    <MESSAGE value="Minor update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -490,14 +498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/send_to_aws_kinesis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sigfox_parser.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -508,8 +508,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/process_sensor_data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+        <state relative-caret-position="400">
+          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/send_to_aws_kinesis.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
           <folding />
         </state>
       </provider>

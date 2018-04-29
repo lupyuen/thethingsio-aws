@@ -30,12 +30,23 @@ function main(params0, callback){
   const params = { timestamp: params0.timestamp };
   if (!params.timestamp) params.timestamp = new Date().toISOString();
   Object.assign(params, params0);  //  Copy all key-values.
-  console.log('*** send_to_aws_kinesis start', { params });
+  if (!params.msgid) params.msgid = getMessageID(params);  //  Assign unique message ID.
   const base64Params = jsbase64.encode(JSON.stringify(params));  //  Params JSON doc encoded in Base64.
+
+  //  Kinesis uses the partition key to determine which shard (or worker) will
+  //  work on this record.  For IoT systems with high sensor data volume, we
+  //  should allocate multiple shards so that the records can be processed in parallel.
+  //  However if we process messages first-in-first-out, and if a particular device
+  //  sends lots of messages, the other devices will have less worker time, increasing
+  //  the message processing latency. So we set the partition key to the device ID to
+  //  assure fair processing across multiple devices - each device should be allocated
+  //  at most 1 shard.  If we can't find the device ID, then we use the timestamp.
+  const partitionKey = params.id || params.timestamp;
+  console.log('*** send_to_aws_kinesis start', { params, partitionKey });
   const body = {
     StreamName: AWSKinesisStream,
     Data: base64Params,
-    PartitionKey: '0',  //  Change this to compute the partition key if you need to support high data volume with multiple partitions.
+    PartitionKey: partitionKey,
     //  Optional Field: ExplicitHashKey, used to explicitly determine the shard the data record is assigned to by overriding the partition key hash.
     //  Optional Field: SequenceNumberForOrdering, guarantees strictly increasing sequence numbers, for puts from the same client and to the same partition key.
   };
@@ -58,6 +69,22 @@ function main(params0, callback){
 
   //  Send the request.
   return sendAWSRequest(para, headers, callback);
+}
+
+function getMessageID(params) {
+  //  Return the unique message ID for this message: deviceid_seqnumber_hourstamp_basestation
+  //  If any field is missing, use the timestamp with a random number.
+  if (!params.id || !params.station || !params.seqNumber) {
+    return [
+      (params.timestamp || new Date().toISOString())
+        .split('-').join('')  //  Remove special chars.
+        .split(':').join('')
+        .split('.').join(''),
+      Math.floor(Math.random() * 100000000)].join('_');
+  }
+  //  Current timestamp rounded down to hours.  Because we won't recycle seqnumber in the same hour.
+  const hourstamp = Math.floor(Date.now() / (1000 * 60 * 60));
+  return [params.id, params.seqNumber, hourstamp, params.station].join('_');
 }
 
 //  //////////////////////////////////////////////////////////////////////////////////// endregion
