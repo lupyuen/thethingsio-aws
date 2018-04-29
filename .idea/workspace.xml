@@ -20,8 +20,8 @@
       <file leaf-file-name="send_to_aws_kinesis.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/send_to_aws_kinesis.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="116" column="74" lean-forward="true" selection-start-line="116" selection-start-column="74" selection-end-line="116" selection-end-column="74" />
+            <state relative-caret-position="280">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -74,6 +74,7 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/process_sensor_data.js" />
+        <option value="$USER_HOME$/Downloads/s3-log-stream-1-2018-04-29-01-55-36-d4fd2a29-e2e8-4419-ae05-bc84d5ca9258.json" />
         <option value="$PROJECT_DIR$/send_to_aws_kinesis.js" />
       </list>
     </option>
@@ -94,8 +95,8 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="78" />
-    <option name="y" value="62" />
+    <option name="x" value="416" />
+    <option name="y" value="66" />
     <option name="width" value="975" />
     <option name="height" value="995" />
   </component>
@@ -313,7 +314,7 @@
       <updated>1524892760616</updated>
       <workItem from="1524892761888" duration="5952000" />
       <workItem from="1524899264772" duration="4039000" />
-      <workItem from="1524904198197" duration="17957000" />
+      <workItem from="1524904198197" duration="18853000" />
     </task>
     <task id="LOCAL-00001" summary="Convert signature to text">
       <created>1524906329002</created>
@@ -385,14 +386,21 @@
       <option name="project" value="LOCAL" />
       <updated>1524966280375</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Remove logging">
+      <created>1524966773940</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1524966773940</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27948000" />
+    <option name="totallyTimeSpent" value="28844000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="78" y="62" width="975" height="995" extended-state="0" />
+    <frame x="416" y="66" width="975" height="995" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -403,7 +411,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26229507" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2612022" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -450,7 +458,8 @@
     <MESSAGE value="Shift timestamp field to the front so Athena results look better" />
     <MESSAGE value="Minor update" />
     <MESSAGE value="Add message ID" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add message ID" />
+    <MESSAGE value="Remove logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove logging" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -522,10 +531,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Downloads/s3-log-stream-1-2018-04-29-01-55-36-d4fd2a29-e2e8-4419-ae05-bc84d5ca9258">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/s3-log-stream-1-2018-04-29-01-55-36-d4fd2a29-e2e8-4419-ae05-bc84d5ca9258.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/send_to_aws_kinesis.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="116" column="74" lean-forward="true" selection-start-line="116" selection-start-column="74" selection-end-line="116" selection-end-column="74" />
+        <state relative-caret-position="280">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>

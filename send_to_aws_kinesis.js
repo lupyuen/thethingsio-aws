@@ -31,6 +31,7 @@ function main(params0, callback){
   if (!params.timestamp) params.timestamp = new Date().toISOString();
   Object.assign(params, params0);  //  Copy all key-values.
   if (!params.msgid) params.msgid = getMessageID(params);  //  Assign unique message ID.
+  if (params['sgfx-payload']) delete params['sgfx-payload']; //  Delete sgfx-payload because the fields are already duplicated.
   const base64Params = jsbase64.encode(JSON.stringify(params));  //  Params JSON doc encoded in Base64.
 
   //  Kinesis uses the partition key to determine which shard (or worker) will
