@@ -12,24 +12,23 @@ const unittest = typeof process !== 'undefined' && process && process.env && pro
 function trigger(params, callback){
   if (params.action !== 'write') return callback(null);  //  Ignore reads, handle only writes.
   if (!params.values) return callback(null);  //  No new sensor values.
-  //  Convert the sensor values array to an object.
+
+  //  We will call Cloud Function send_to_aws_kinesis to send the data.
+  //  Prepare the params for the Cloud Function. Convert the sensor values array to an object.
+  const cloudFunc = 'send_to_aws_kinesis';
+  const cloudParams = {};
   const values = params.values;
-  const sensorValues = {};
   values.forEach(keyValue => {
     const key = keyValue.key;
     const value = keyValue.value;
-    sensorValues[key] = value;
+    cloudParams[key] = value;
   });
-  const cloudFunc = 'send_to_aws_kinesis';
-  console.log(['*** process_sensor_data start', new Date().toISOString(), JSON.stringify({ cloudFunc, sensorValues }, null, 2)].join('-'.repeat(5)));
+  console.log(['*** process_sensor_data start', new Date().toISOString(), JSON.stringify({ cloudFunc, cloudParams }, null, 2)].join('-'.repeat(5)));
 
-  //  Call cloud function to send the sensor data to AWS Kinesis.
-  thethingsAPI.cloudFunction(cloudFunc, sensorValues, (error, result) => {
-    if (error) {
-      console.error('*** process_sensor_data error', error.message, error.stack);
-      return;
-    }
-    console.log(['*** process_sensor_data OK', new Date().toISOString(), JSON.stringify({ result, cloudFunc, sensorValues }, null, 2)].join('-'.repeat(5)));
+  //  Call the Cloud Function, passing the parameters.  In the next version we will call multiple functions.
+  thethingsAPI.cloudFunction(cloudFunc, cloudParams, (error, result) => {
+    if (error) return console.error('*** process_sensor_data error', error.message, error.stack, { cloudFunc, cloudParams });
+    console.log(['*** process_sensor_data OK', new Date().toISOString(), JSON.stringify({ result, cloudFunc, cloudParams }, null, 2)].join('-'.repeat(5)));
   });
 
   //  Don't wait for cloud function to complete.
