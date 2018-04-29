@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2aefaf11-0bbb-4c6c-81d1-9f81b9b7f842" name="Default" comment="Minor update">
+    <list default="true" id="2aefaf11-0bbb-4c6c-81d1-9f81b9b7f842" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/send_to_aws_kinesis.js" afterPath="$PROJECT_DIR$/send_to_aws_kinesis.js" />
     </list>
@@ -20,8 +20,8 @@
       <file leaf-file-name="send_to_aws_kinesis.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/send_to_aws_kinesis.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+            <state relative-caret-position="646">
+              <caret line="116" column="74" lean-forward="true" selection-start-line="116" selection-start-column="74" selection-end-line="116" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -313,7 +313,7 @@
       <updated>1524892760616</updated>
       <workItem from="1524892761888" duration="5952000" />
       <workItem from="1524899264772" duration="4039000" />
-      <workItem from="1524904198197" duration="17464000" />
+      <workItem from="1524904198197" duration="17957000" />
     </task>
     <task id="LOCAL-00001" summary="Convert signature to text">
       <created>1524906329002</created>
@@ -378,11 +378,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524960121208</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add message ID">
+      <created>1524966280375</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1524966280375</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27455000" />
+    <option name="totallyTimeSpent" value="27948000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="78" y="62" width="975" height="995" extended-state="0" />
@@ -442,7 +449,8 @@
     <MESSAGE value="Check expected header" />
     <MESSAGE value="Shift timestamp field to the front so Athena results look better" />
     <MESSAGE value="Minor update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor update" />
+    <MESSAGE value="Add message ID" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add message ID" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -516,8 +524,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/send_to_aws_kinesis.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        <state relative-caret-position="646">
+          <caret line="116" column="74" lean-forward="true" selection-start-line="116" selection-start-column="74" selection-end-line="116" selection-end-column="74" />
           <folding />
         </state>
       </provider>

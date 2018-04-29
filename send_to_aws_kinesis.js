@@ -113,9 +113,8 @@ function sendAWSRequest(para, headers, callback) {
       return callback(null, error.message);
     }
     const result = response.result;
-    console.log(['*** send_to_aws_kinesis OK', new Date().toISOString(), JSON.stringify({ result, req, response }, null, 2)].join('-'.repeat(5)));
-    console.log('response=', response);
-    console.log('result=', result);
+    console.log(['*** send_to_aws_kinesis OK', new Date().toISOString(), JSON.stringify({ result }, null, 2)].join('-'.repeat(5)));
+    // console.log('response=', response); console.log('result=', result);
     return callback(null, result);
   });
 }
